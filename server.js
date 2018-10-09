@@ -19,6 +19,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 // ?_method HERE IS A QUERY STRING
 app.use(methodOverride('_method'));
 
+// SET PORT
+app.listen(3000, () => {
+	console.log("Server is listening on port 3000");
+});
 
 // TEST RUN
 app.get('/', (req, res) => {
@@ -26,6 +30,6 @@ app.get('/', (req, res) => {
 });
 
 
-app.listen(3000, () => {
-	console.log("Server is listening on port 3000");
-});
+app.get('/pokemon', (req, res) => {
+	res.send(Pokemon);
+})
