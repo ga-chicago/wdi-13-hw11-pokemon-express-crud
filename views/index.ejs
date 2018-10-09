@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon Index Page</title>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	<style type="text/css">
+		body {
+			background-color: whitesmoke;
+			font-family: 'Josefin Sans', sans-serif;
+			margin-left: 50px;
+			color: #fcb749;
+		}
+		li, a {
+			list-style: none;
+			color: #4286f4;
+			margin-top: 10px;
+			text-decoration: none;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>GOTTA CATCH EM ALL</h1>
+	<ul>
+		<%pokemon.forEach((el, i) => {%>
+			<li class="pokemon"><a href=""><%=el.name%></a></li>
+		<%})%>
+	</ul>
+
+</body>
+</html>
