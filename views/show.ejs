@@ -9,18 +9,21 @@
 </head>
 <body>
 
-	<h1><%=pokemon.name%></h1>
+	<div>
+		<h1><%=pokemon.name%></h1>
 
-	<h4><%=pokemon.name%> array position: <%=id%></h4>
-		
-		<div>
-			<img src="<%=pokemon.img%>">
-		</div>
+		<h4><%=pokemon.name%> array position: <%=id%></h4>
+	</div>
+
+	<div>
+		<img src="<%=pokemon.img%>">
+	</div>
 	
 	<br/>
-
-	<a id="backHome" href="http://localhost:3000/pokemon">Back to Index</a>
-
+	
+	<nav>
+		<a id="backHome" href="http://localhost:3000/pokemon">Back to Index</a>
+	</nav>
 
 </body>
 </html>

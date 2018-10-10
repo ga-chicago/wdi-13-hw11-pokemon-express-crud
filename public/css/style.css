@@ -1,9 +1,10 @@
 body {
-	/*font-size: 10px;*/
-	/*-webkit-font-smoothing: none;*/
+	-webkit-font-smoothing: none;
 	font-family: 'pokemon-font', monospace;
 	background-color: #222;
 	color: lightgrey;
+	display: flex;
+	flex-direction: column;
 
 }
 
@@ -13,7 +14,7 @@ h1 {
 }
 
 div	{
-	margin: 20px auto;
+	/*margin: 20px auto;*/
 }
 
 ul {
@@ -21,18 +22,29 @@ ul {
 }
 
 .pokename {
+    display: inline-flex;
+	font-size: 18px;
 	color: lightgrey;
 	margin: 10px auto;
 	line-height: 25px;
-	width: 100px;
-    display: inline-flex;
+	width: 150px;
 }
 
 #edit {
+    display: inline-flex;
 	font-style: italic;
+	font-size: 14px;
 	color: grey;
 	text-decoration: none;
+	width: 150px;
+}
 
+form {
+    display: inline-flex;
+}
+
+#delete {
+	width: 120px;
 }
 
 #edit:hover {
