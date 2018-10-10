@@ -9,12 +9,17 @@
 </head>
 <body>
 
-	<h1>Edit <%pokemon.name%></h1>
+	<h1>Edit <%=pokemon.name%></h1>
+
+	<div>
+		<img src="<%=pokemon.img%>">
+	</div>
 
 	<form action="/pokemon/<%=id%>?_method=PUT" method="post">
-		Name: <input type="text" name="name" value="<%pokemon.name%>">
-		img: <input type="link" name="img" value="<%pokemon.img%>">
-		<input type="submit" value="Edit <%pokemon.name%>">
+		Name: <input type="text" name="name" value="<%=pokemon.name%>">
+		img: <input type="link" name="img" value="<%=pokemon.img%>">
+		<br/>
+		<input id="submitEdit" type="submit" value="Submit edits for <%=pokemon.name%>">
 	</form>
 	
 	<br/>
