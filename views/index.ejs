@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1> Pokemon Index</h1>
+	<ul class="pokemon">
+		<% for(let i = 0; i < pokemon.length; i++) {%>
+		<li>
+			<a href="/pokemon/<%=i%>"><%=pokemon[i].name%></a>
+		            <!-- <form action="/products/<%=i;%>?_method=DELETE" method="POST">
+                    <input type="submit" value="delete"> -->
+                  <!-- </form> -->
+		</li>
+                    <!-- <a href="/pokemon/<%=i%>/edit">Edit <%=pokemon[i].name%></a> -->
+		<%}%>
+	</ul>
+	<br>
+		<button><a href="http://localhost:3000/products/new">New Pokemon</a></button>
+
+</body>
+</html>
