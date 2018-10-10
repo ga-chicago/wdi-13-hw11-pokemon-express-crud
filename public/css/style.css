@@ -12,6 +12,10 @@ h1 {
 	margin: 0 auto;
 }
 
+div	{
+	margin: 20px auto;
+}
+
 ul {
 	list-style-type: decimal-leading-zero;
 }
@@ -35,6 +39,6 @@ ul {
 	text-decoration: underline;
 }
 
-#createNew {
+#createNew, #backHome {
 	color: #F8D300;
 }

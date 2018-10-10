@@ -37,11 +37,38 @@ app.get('/', (req, res) => {
 	res.send("Server responding to get request from pokemon app");
 });
 
-
+// Index Route
 app.get('/pokemon', (req, res) => {
 	// res.send(Pokemon);
 	res.render('index.ejs', {
 		Pokemon
 	});
 });
+
+
+// Show Route
+app.get('/pokemon/:id', (req, res) => {
+
+	res.render('show.ejs', {
+		pokemon: Pokemon[req.params.id],
+		id: req.params.id
+	})
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

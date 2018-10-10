@@ -33,7 +33,7 @@ describe('pokemon routes index and show', function(){
         .expect(200)
         .expect((response)=>{
             const $ = cheerio.load(response.text)
-            const firstHref = $('.pokemon li:first-child').attr('href');
+            const firstHref = $('.pokemon li:first-child a').attr('href'); 
             firstHref.should.be.eq('/pokemon/0')
         })
     })
