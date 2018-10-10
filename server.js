@@ -11,6 +11,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
 
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
 const Pokemon = require('./pokemon');
 
 app.use(express.static('CSS'));
@@ -54,7 +57,8 @@ app.get('/pokemon/new', (req, res) => {
 
 app.get('/pokemon/:index', (req, res) => {
 	res.render('show.ejs', {
-		pokemon: Pokemon[req.params.index]
+		pokemon: Pokemon[req.params.index],
+		i: req.params.index
 	})
 })
 
@@ -72,6 +76,18 @@ The final app should have what are known as the 7 RESTful routes.
 app.post('/pokemon', (req, res) => {
 	Pokemon.push(req.body);
 	res.redirect('/pokemon')
+})
+
+app.get('/pokemon/:index/edit', (req, res) => {
+	res.render('edit.ejs', {
+		pokemon: Pokemon[req.params.index],
+		id: req.params.index
+	})
+})
+
+app.put('/pokemon/:index', (req, res) => {
+	res.redirect('/pokemon');
+	Pokemon[req.params.index] = req.body;
 })
 
 
