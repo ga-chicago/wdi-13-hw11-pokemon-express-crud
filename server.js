@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 
 // Add CSS through 'public' directory
-app.use( express.static( "public" ) );
+app.use(express.static('public'));
 
 
 
