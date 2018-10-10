@@ -11,7 +11,7 @@ app.use('/assets', express.static('assets'));
 app.get('/', (req, res) => {
 	res.send('POKEMON HOME')
 });
-//POKEMON ROUTE
+//INDEX ROUTE
 app.get('/pokemon', (req, res) => {
 	// res.send(Pokemon)
 	res.render('index.ejs', {
@@ -19,7 +19,12 @@ app.get('/pokemon', (req, res) => {
 	})
 	
 });
-
+//SHOW ROUTE
+app.get('/pokemon/:id', (req, res) => {
+	res.render('show.ejs', {
+		pokemon: Pokemon[req.params.id]
+	})
+})
 
 
 
