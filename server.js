@@ -1,28 +1,19 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const app = express();
-const Pokemon = require('./pokemon');
+const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
+const pokemonController = require('./controllers/pokemon');
 
-const port = 3000;
-
-app.listen(port, function() {
-  console.log("App is running on port: ", port);
-});
-
+//middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use('/pokemon', pokemonController);
 app.use(express.static('public'));
 
-//index route
-app.get('/pokemon', (req,res) => {
-	res.render('index.ejs', {
-		pokemon: Pokemon
-	});
+app.get('/',(req, res) => {
+	res.send('This is the server responding to a get request')
 })
 
-//show route
-app.get('/pokemon/:id', (req,res) => {
-	res.render('show.ejs', {
-		pokemon: Pokemon[req.params.id]
-	})
+app.listen(3000, () => {
+	console.log('server is listening on port 3000');
 })
