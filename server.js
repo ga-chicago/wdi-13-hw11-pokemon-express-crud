@@ -6,16 +6,19 @@ const Pokemon = require('./model/pokemon')
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'))
+app.use('/assets', express.static('assets'));
 //HOME PAGE ROUTE
 app.get('/', (req, res) => {
 	res.send('POKEMON HOME')
 });
 //POKEMON ROUTE
 app.get('/pokemon', (req, res) => {
-	res.send(Pokemon)
+	// res.send(Pokemon)
+	res.render('index.ejs', {
+		pokemon: Pokemon
+	})
 	
 });
-
 
 
 
