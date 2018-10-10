@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="/css/style.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Pokemon Index Page</h1>
+        <ul class="pokemon">
+            <% for(let i = 0; i < Pokemon.length; i++){ %>
+                <li>
+			 Name: <%=Pokemon[i].name; %><br>
+                </li>
+            <% } %>
+        </ul>
+    </body>
+</html>
