@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const Pokemon = require('./pokemon');
 
 const port = 3000;
 
@@ -11,3 +12,7 @@ app.listen(port, function() {
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+//index route
+app.get('/pokemon', (req,res) => {
+	res.send(Pokemon);
+})
