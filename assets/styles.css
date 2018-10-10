@@ -6,16 +6,31 @@ li {
 
 }
 h1 {
-	font-family: 'Bangers', cursive;
+	/*font-family: 'Bangers', cursive;*/
+	font-family: 'Amatic SC', cursive;
+	font-weight: bold;
 
 }
 h2 {
-	font-family: 'Amatic SC', cursive;
-	text-decoration: underline;
+	font-family: 'Bangers', cursive;
+	/*font-family: 'Amatic SC', cursive;*/
+	/*text-decoration: underline;*/
 }
 a {
-	font-family: 'Amatic SC', cursive;
+	font-family: 'Bangers', cursive;
 	font-size: 30pt;
 	text-decoration: none;
+	color: green;
+}
+.edit-pok {
+	color: blue;
+	font-size: 16pt;
+	font-family: 'Audiowide', cursive;
+}
+.del-pok {
 	color: red;
+}
+input {
+	color: red;
+	font-weight: bold;
 }
