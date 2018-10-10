@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link href="/css/style.css" rel="stylesheet" type="text/css">
+
+	<title>index.ejs</title>
+
+</head>
+<body>
+
+	<h1>POKEMON - INDEX.ejs</h1>
+
+	<div>
+		<ul class="pokemon">
+			<%Pokemon.forEach((elem, i)=> {%>
+				<li>
+					<a class="pokename" href="http://localhost:3000/pokemon/<%=i%>"><%=elem.name%></a>
+					
+					<a id="edit" href="http://localhost:3000/pokemon/<%=i%>/edit">Edit <%=elem.name%></a>
+
+					<form action="/pokemon/<%=i%>?_method=DELETE" method="POST">
+						<input id="delete" type="submit" value="Delete <%=elem.name%>">
+					</form>
+				</li>
+
+				<br/>
+			<%})%>
+		</ul>
+	</div>
+
+	<br/>
+	<br/>
+	
+	<nav>
+		<a id="createNew" href="http://localhost:3000/pokemon/new">Create a new pokemon!</a>
+	</nav>
+
+
+</body>
+</html>
