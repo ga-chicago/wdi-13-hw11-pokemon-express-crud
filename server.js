@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const port = 3000;
-const static = require('serve-static');
 
 app.listen(port, () => {
 	console.log('listening on port ' + port);
