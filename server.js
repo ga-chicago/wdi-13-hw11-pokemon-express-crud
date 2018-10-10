@@ -18,3 +18,10 @@ app.get('/pokemon', (req,res) => {
 		pokemon: Pokemon
 	});
 })
+
+//show route
+app.get('/pokemon/:id', (req,res) => {
+	res.render('show.ejs', {
+		pokemon: Pokemon[req.params.id]
+	})
+})
