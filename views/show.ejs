@@ -9,18 +9,20 @@
 </head>
 <body>
 
-	<div>
-		<h1><%=pokemon.name%></h1>
+	<h1><%=pokemon.name%></h1>
 
+
+	<div>
 		<h4><%=pokemon.name%> array position: <%=id%></h4>
-	</div>
-
-	<div>
 		<img src="<%=pokemon.img%>">
 	</div>
+
+	<form action="/pokemon/<%=id%>?_method=DELETE" method="POST">
+		<input id="delete" type="submit" value="Delete <%=pokemon.name%>">
+	</form>
 	
 	<br/>
-	
+
 	<nav>
 		<a id="backHome" href="http://localhost:3000/pokemon">Back to Index</a>
 	</nav>

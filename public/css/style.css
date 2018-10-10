@@ -10,11 +10,18 @@ body {
 
 h1 {
 	color: #F8D300;
-	margin: 0 auto;
+	margin: 30px auto;
+}
+
+img {
+	max-width: 360px;
+	border-radius: 10px;
+	border: 5px solid #345B9E;
 }
 
 div	{
-	/*margin: 20px auto;*/
+	margin: 20px auto;
+	text-align: -webkit-center;
 }
 
 ul {
@@ -40,7 +47,18 @@ ul {
 }
 
 form {
+	margin: 10px auto;
+}
+
+.pokemon form {
     display: inline-flex;
+}
+#newPokeForm {
+    margin: 20px auto;
+}
+
+form input {
+
 }
 
 #delete {

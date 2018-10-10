@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link href="/css/style.css" rel="stylesheet" type="text/css">
+
+	<title>edit.ejs</title>
+
+</head>
+<body>
+
+	<h1>Edit <%pokemon.name%></h1>
+
+	<form action="/pokemon/<%=id%>?_method=PUT" method="post">
+		Name: <input type="text" name="name" value="<%pokemon.name%>">
+		img: <input type="link" name="img" value="<%pokemon.img%>">
+		<input type="submit" value="Edit <%pokemon.name%>">
+	</form>
+	
+	<br/>
+	
+	<nav>
+		<a id="backHome" href="http://localhost:3000/pokemon">Back to Index</a>
+	</nav>
+
+</body>
+</html>

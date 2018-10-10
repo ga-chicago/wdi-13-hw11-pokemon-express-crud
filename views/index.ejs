@@ -19,7 +19,7 @@
 					
 					<a id="edit" href="http://localhost:3000/pokemon/<%=i%>/edit">Edit <%=elem.name%></a>
 
-					<form action="/pokemon/<%=i; %>?_method=DELETE" method="POST">
+					<form action="/pokemon/<%=i%>?_method=DELETE" method="POST">
 						<input id="delete" type="submit" value="Delete <%=elem.name%>">
 					</form>
 				</li>
