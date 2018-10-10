@@ -5,7 +5,7 @@
 		
 	</title>
 	<link rel="stylesheet" type="text/css" href="/assets/styles.css">
-	<link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Sniglet:400" rel="stylesheet">
 <body>
 	<div>
 	<h1> Pokemon Index</h1>
@@ -13,12 +13,12 @@
 		<% for(let i = 0; i < pokemon.length; i++) {%>
 		<li>
 			<a href="/pokemon/<%=i%>"><%=pokemon[i].name%></a>
-		</li>   
+		</li>  
+		<br> 
 		<%}%>
+		<button><a href="http://localhost:3000/pokemon/new">New Pokemon</a></button>
 	</ul>
 </div>
 	<br>
-<!-- 		<button><a href="http://localhost:3000/products/new">New Pokemon</a></button>
- -->
 </body>
 </html>
