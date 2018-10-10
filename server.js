@@ -1,3 +1,4 @@
+// -------------------- SETUP -------------------- //
 
 const express = require('express');
 
@@ -19,6 +20,13 @@ app.use(bodyParser.urlencoded({extended: false}));
 // ?_method HERE IS A QUERY STRING
 app.use(methodOverride('_method'));
 
+// Add CSS through 'public' directory
+app.use( express.static( "public" ) );
+
+
+
+// -------------------- LISTENERS -------------------- //
+
 // SET PORT
 app.listen(3000, () => {
 	console.log("Server is listening on port 3000");
@@ -31,5 +39,9 @@ app.get('/', (req, res) => {
 
 
 app.get('/pokemon', (req, res) => {
-	res.send(Pokemon);
-})
+	// res.send(Pokemon);
+	res.render('index.ejs', {
+		Pokemon
+	});
+});
+

@@ -1,0 +1,40 @@
+body {
+	/*font-size: 10px;*/
+	/*-webkit-font-smoothing: none;*/
+	font-family: 'pokemon-font', monospace;
+	background-color: #222;
+	color: lightgrey;
+
+}
+
+h1 {
+	color: #F8D300;
+	margin: 0 auto;
+}
+
+ul {
+	list-style-type: decimal-leading-zero;
+}
+
+.pokename {
+	color: lightgrey;
+	margin: 10px auto;
+	line-height: 25px;
+	width: 100px;
+    display: inline-flex;
+}
+
+#edit {
+	font-style: italic;
+	color: grey;
+	text-decoration: none;
+
+}
+
+#edit:hover {
+	text-decoration: underline;
+}
+
+#createNew {
+	color: #F8D300;
+}
