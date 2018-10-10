@@ -3,5 +3,19 @@ body {
 }
 li {
 	list-style-type: none;
-	
+
+}
+h1 {
+	font-family: 'Bangers', cursive;
+
+}
+h2 {
+	font-family: 'Amatic SC', cursive;
+	text-decoration: underline;
+}
+a {
+	font-family: 'Amatic SC', cursive;
+	font-size: 30pt;
+	text-decoration: none;
+	color: red;
 }
