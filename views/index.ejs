@@ -23,7 +23,7 @@
 	<h1>GOTTA CATCH EM ALL</h1>
 	<ul>
 		<%pokemon.forEach((el, i) => {%>
-			<li class="pokemon"><a href=""><%=el.name%></a></li>
+			<li class="pokemon"><a href="/pokemon/<%=i%>"><%=el.name%></a></li>
 		<%})%>
 	</ul>
 

@@ -35,6 +35,20 @@ app.get('/pokemon', (req, res) => {
 	});
 })
 
+/**************************************************************************
+
+Inside your server.js, add a new get route /pokemon/:id
+This route should serve a template called show.ejs which displays the information of a specific pokemon according to their index in the pokemon array. For example, /pokemon/0 should display the 0 indexed pokemon.
+You may want to look up how to access route parameters in express.
+
+**************************************************************************/
+
+app.get('/pokemon/:index', (req, res) => {
+	res.render('show.ejs', {
+		pokemon: Pokemon[req.params.index]
+	})
+})
+
 
 
 
