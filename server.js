@@ -42,13 +42,37 @@ You may want to look up how to access route parameters in express.
 
 **************************************************************************/
 
+/*************************
+Setting up Post Route
+**************************/
+
+app.get('/pokemon/new', (req, res) => {
+	res.render('new.ejs', {
+		pokemon: Pokemon
+	})
+})
+
 app.get('/pokemon/:index', (req, res) => {
 	res.render('show.ejs', {
 		pokemon: Pokemon[req.params.index]
 	})
 })
 
+/**************************************************************************
+Set up routes and templates to allow for full CRUD functionality.
 
+Users should be able to insert a new pokemon into the array using a form on a new.ejs page. Creation should be handled via a POST route to the /pokemon route.
+Users should be able to edit an individual pokemon on an edit.ejs page accessed from the /pokemon/:id/edit route. The updating should be handled via a POST request to the /pokemon/:id route.
+Users should be able to delete a pokemon using a button provided on the show and index pages.
+The final app should have what are known as the 7 RESTful routes.
+
+**************************************************************************/
+
+
+app.post('/pokemon', (req, res) => {
+	Pokemon.push(req.body);
+	res.redirect('/pokemon')
+})
 
 
 
