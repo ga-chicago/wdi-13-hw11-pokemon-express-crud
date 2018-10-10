@@ -11,6 +11,7 @@ app.listen(port, function() {
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static('public'));
 
 //index route
 app.get('/pokemon', (req,res) => {
