@@ -8,7 +8,7 @@ app.use(express.static('public'))
 // })
 const Pokemon = require('./models/pokemon')
 
-
+//One step ahead I guess...
 
 app.get('/pokemon', (req, res) => {
 	res.render('index.ejs', {
