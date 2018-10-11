@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title></title>
         <link rel="stylesheet" href="/css/style.css" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -10,9 +11,16 @@
         <ul class="pokemon">
             <% for(let i = 0; i < Pokemon.length; i++){ %>
                 <li>
-			 Name: <a href="/pokemon/<%=i%>"><%=Pokemon[i].name; %></a><br>
+			        Name: <a href="/pokemon/<%=i%>"><%=Pokemon[i].name; %></a><br>
+                    <form action="/pokemon/<%=i%>?_method=DELETE" method="POST">
+                        <input type="submit" value="Delete">
+                    </form>
+                    <a href="/pokemon/<%=i%>/edit">Edit</a>
                 </li>
             <% } %>
         </ul>
+        <nav>
+            <a href="/pokemon/new">Add a New Pokemon</a>
+        </nav>
     </body>
 </html>
