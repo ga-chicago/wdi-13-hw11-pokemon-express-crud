@@ -24,7 +24,8 @@ router.post('/',(req,res) => {
 //show route
 router.get('/:id', (req,res) => {
 	res.render('show.ejs', {
-		pokemon: Pokemon[req.params.id]
+		pokemon: Pokemon[req.params.id],
+		id: req.params.id
 	})
 })
 
