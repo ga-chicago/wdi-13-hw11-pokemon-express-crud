@@ -25,6 +25,10 @@
 	<ul>
 		<%pokemon.forEach((el, i) => {%>
 			<li class="pokemon"><a href="/pokemon/<%=i%>"><%=el.name%></a></li>
+			<br>
+			<form action="/pokemon/<%=i%>?_method=DELETE" method="POST">
+				<button type="submit">Delete</button>
+			</form>
 		<%})%>
 	</ul>
 	<br>
