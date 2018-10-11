@@ -7,6 +7,7 @@ const pokemonController = require('./controllers/pokemon');
 //middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(methodOverride('_method'));
 app.use('/pokemon', pokemonController);
 app.use(express.static('public'));
 

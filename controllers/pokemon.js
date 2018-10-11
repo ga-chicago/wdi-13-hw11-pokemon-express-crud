@@ -28,6 +28,24 @@ router.get('/:id', (req,res) => {
 	})
 })
 
+//delete route
+router.delete('/:id', (req,res) => {
+  Pokemon.splice(req.params.id,1);
+  res.redirect('/pokemon');
+})
 
+//edit route
+router.get('/:id/edit', (req,res) => {
+  res.render('edit.ejs', {
+    pokemon: Pokemon[req.params.id],
+    index: req.params.id
+  })
+})
+
+//update route
+router.put('/:id', (req,res) => {
+  Pokemon[req.params.id] = req.body;
+  res.redirect('/pokemon');
+})
 
 module.exports = router;
