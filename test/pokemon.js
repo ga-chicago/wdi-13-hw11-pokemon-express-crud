@@ -3,6 +3,7 @@ const supertest = require('supertest');
 const app = require('../server');
 const should = chai.should()
 const cheerio = require('cheerio');
+const firstHref = $('.pokemon li:first-child a').attr('href'); 
 
 describe('pokemon routes index and show', function(){
     it('displays all pokemon at the index route', function(done){
