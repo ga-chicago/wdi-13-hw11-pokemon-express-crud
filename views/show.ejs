@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Audiowide|Bangers" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/assets/styles.css">
+	<title></title>
+</head>
+<body>
+<% include partials/nav.ejs %>
+<h1>Pokemon Show Page</h1>
+<div>
+	<h2><%= pokemon.name %></h2>
+	<br/>
+	<img src="<%=pokemon.img%>">
+	<br/>
+	</div>
+	<a href="http://localhost:3000/pokemon">Back</a>
+</body>
+</html>

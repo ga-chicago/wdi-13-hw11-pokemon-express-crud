@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Audiowide|Bangers" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/styles.css">
+	<title></title>
+</head>
+<body>
+<% include partials/nav.ejs %>
+<h1>New Pokemon Page</h1>
+<div class ="edit-form">
+<form action="/pokemon" method="POST">
+	Name: <input type="text" name="name"><br/>
+	Image: <input type="img" name="img"><br/>
+	<input type="submit">
+</form>
+</div>
+
+</body>
+</html>
