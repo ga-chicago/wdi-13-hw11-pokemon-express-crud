@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon Index Page</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<!-- 	<style type="text/css">
+		body {
+			background-color: whitesmoke;
+			font-family: 'Josefin Sans', sans-serif;
+			margin-left: 50px;
+			color: #fcb749;
+		}
+		li, a {
+			list-style: none;
+			color: #4286f4;
+			margin-top: 10px;
+			text-decoration: none;
+		}
+
+	</style> -->
+</head>
+<body>
+	<h1>GOTTA CATCH EM ALL</h1>
+	<ul>
+		<%pokemon.forEach((el, i) => {%>
+			<li class="pokemon"><a href="/pokemon/<%=i%>"><%=el.name%></a></li>
+			<br>
+			<form action="/pokemon/<%=i%>?_method=DELETE" method="POST">
+				<button type="submit">Delete</button>
+			</form>
+		<%})%>
+	</ul>
+	<br>
+	<br>
+	<a href="/pokemon/new">Add a new Pokemon!!</a>
+
+</body>
+</html>
