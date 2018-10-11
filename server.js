@@ -90,6 +90,11 @@ app.put('/pokemon/:index', (req, res) => {
 	Pokemon[req.params.index] = req.body;
 })
 
+app.delete('/pokemon/:index', (req, res) => {
+	Pokemon.splice(req.params.index, 1);
+	res.redirect('/pokemon');
+})
+
 
 
 
