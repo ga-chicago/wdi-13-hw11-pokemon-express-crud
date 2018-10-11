@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+	<link rel="stylesheet" type="text/css" href="/assets/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Sniglet:400" rel="stylesheet">
+</head>
+<body>
+	<div>
+	<h1>Pokemon Edit page</h1>
+       <form action="/pokemon/<%=id%>?_method=PUT" method="POST" >
+			
+
+            Name: <input type="text" name="name" value="<%=pokemon.name%>"/> <br/>
+            IMG: <input type="text" name="img" value="<%=pokemon.img%>"/> <br/>
+            <br/> 
+
+            <input type="submit" name="" value="Submit Changes"/>
+        </form>
+
+        
+	<button><a href="http://localhost:3000/pokemon/">home</a></button>
+	</div>
+
+</body>
+</html>
+
+    	
